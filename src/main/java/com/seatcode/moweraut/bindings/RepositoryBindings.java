@@ -11,12 +11,13 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class RepositoryBindings {
 
+    public static final int DURATION = 24;
+
     @Bean
     public Cache<Long, Mower> provideMowerRepository() {
         return CacheBuilder.newBuilder()
-                .expireAfterWrite(24, TimeUnit.HOURS)
+                .expireAfterWrite(DURATION, TimeUnit.HOURS)
                 .concurrencyLevel(Runtime.getRuntime().availableProcessors())
                 .build();
     }
-
 }

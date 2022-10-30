@@ -1,7 +1,6 @@
 package com.seatcode.moweraut.strategy;
 
 import com.seatcode.moweraut.dto.mower.Mower;
-import com.seatcode.moweraut.dto.orientation.CardinalDirection;
 
 public class MoveForwardStrategy implements MowerStrategy {
 

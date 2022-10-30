@@ -10,12 +10,24 @@ public interface MowerRepository {
      * Saves new mower.
      *
      * @param mower the mower.
-     * @return
+     * @return the saved mower
      */
     Mower saveMower(Mower mower);
 
+    /**
+     * Gets mower by id
+     *
+     * @param id the mower id
+     * @return the optional
+     */
     Optional<Mower> getMowerById(Long id);
 
+    /**
+     * Updates mower
+     *
+     * @param mower the mower
+     * @return the mower
+     */
     Mower updateMower(final Mower mower);
 
 }
