@@ -1,34 +1,24 @@
 package com.seatcode.moweraut.usecases;
 
 import com.seatcode.moweraut.dto.mower.Mower;
-import com.seatcode.moweraut.dto.mower.MowerRequest;
+import com.seatcode.moweraut.dto.mower.MowerMoveRequest;
 import com.seatcode.moweraut.dto.mower.MowerResponse;
-import com.seatcode.moweraut.services.MowerCommandExecutor;
+import com.seatcode.moweraut.services.mower.MowerCommandExecutorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class MowerAutUseCase {
 
     @Autowired
-    private MowerCommandExecutor mowerCommandExecutor;
-
-    public List<Mower> getAllMowers() {
-        return List.of(Mower.builder().build());
-    }
-
-    public Mower getMowerById(final long id) {
-        return Mower.builder().build();
-    }
+    private MowerCommandExecutorService mowerCommandExecutorService;
 
     public Mower createMower(final Mower mower) {
-        return mower;
+        return mowerCommandExecutorService.create(mower);
     }
 
-    public MowerResponse moveMower(final MowerRequest mowerRequest) {
-        return MowerResponse.builder().build();
+    public MowerResponse moveMower(final MowerMoveRequest mowerMoveRequest) {
+        return mowerCommandExecutorService.move(mowerMoveRequest);
     }
 
 }

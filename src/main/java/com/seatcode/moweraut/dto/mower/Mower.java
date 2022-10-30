@@ -4,12 +4,14 @@ import com.seatcode.moweraut.dto.Position;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
 
-@Builder
+@Builder(toBuilder = true)
 @Getter
+@Setter
 @EqualsAndHashCode
 public class Mower implements Serializable {
 
@@ -18,4 +20,5 @@ public class Mower implements Serializable {
 
     private final long id;
     private final Position position;
+
 }

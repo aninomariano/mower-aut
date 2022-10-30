@@ -7,17 +7,17 @@ import lombok.Getter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
 
+@Getter
 @Builder
 @EqualsAndHashCode
-@Getter
-public class MowerRequest implements Serializable {
+public class MowerMoveRequest implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 3039893059429951918L;
 
     private final Plateau plateau;
-    private final MowerInput firstMowerInput;
-    private final MowerInput SecondMowerInput;
+    private final List<MowerInput> mowerInputs;
 
 }

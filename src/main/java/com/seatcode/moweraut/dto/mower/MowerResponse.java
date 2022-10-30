@@ -7,6 +7,7 @@ import lombok.Getter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
 
 @Builder
 @EqualsAndHashCode
@@ -16,7 +17,6 @@ public class MowerResponse implements Serializable {
     @Serial
     private static final long serialVersionUID = -4346048924839537007L;
 
-    private final Position firstMower;
-    private final Position secondMower;
+    private final List<Position> positions;
 
 }
