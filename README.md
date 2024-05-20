@@ -6,7 +6,7 @@ For building and running the application you need:
 
 - [JDK 17](https://openjdk.org/projects/jdk/17/)
 - [Gradle 7.5.1](https://docs.gradle.org/7.5.1/release-notes.html)
-## Running the application locally
+## Running the application locally 
 
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.seatcode.moweraut.MowerAutApplication` class from your IDE.
 
